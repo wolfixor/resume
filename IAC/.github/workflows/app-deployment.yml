@@ -1,0 +1,77 @@
+name: App Deployment
+
+on:
+  repository_dispatch:
+    types: [deploy]
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    name: Deploy Application
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v3
+
+    # - name: Setup Arvan CLI
+    #   run: |
+    #     curl -fsSL https://github.com/arvancloud/cli/releases/latest/download/arvan_linux_amd64.tar.gz | tar -xz
+    #     sudo mv arvan /usr/local/bin/
+    #     arvan auth login --api-key ${{ secrets.ARVAN_API_KEY }}
+
+    - name: Setup kubectl
+      run: |
+        curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+        sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+        mkdir -p ~/.kube
+        echo "${{ secrets.KUBECONFIG }}" | base64 -d > ~/.kube/config
+        chmod 600 ~/.kube/config
+
+    - name: Determine workspace and image
+      id: config
+      run: |
+        ENV="${{ github.event.client_payload.env }}"
+        APP="${{ github.event.client_payload.app }}"
+        TAG="${{ github.event.client_payload.tag }}"
+        
+        case "$ENV" in
+          prod) echo "workspace=prod" >> $GITHUB_OUTPUT ;;
+          staging) echo "workspace=staging" >> $GITHUB_OUTPUT ;;
+          dev) echo "workspace=dev" >> $GITHUB_OUTPUT ;;
+          *) echo "workspace=dev" >> $GITHUB_OUTPUT ;;
+        esac
+        
+        echo "image_tag=${TAG}" >> $GITHUB_OUTPUT
+        echo "app_name=${APP}" >> $GITHUB_OUTPUT
+
+    - name: Terraform Init
+      run: terraform init
+
+    - name: Select Workspace
+      run: terraform workspace select ${{ steps.config.outputs.workspace }} || terraform workspace new ${{ steps.config.outputs.workspace }}
+
+    - name: Update image tag and apply
+      run: |
+        APP="${{ steps.config.outputs.app_name }}"
+        TAG="${{ steps.config.outputs.image_tag }}"
+        WORKSPACE="${{ steps.config.outputs.workspace }}"
+        
+        # Update the image tag in tfvars
+        sed -i "s/${APP}_image.*=.*/${APP}_image = \"wolfix1245\/${APP}:${TAG}\"/" env/${WORKSPACE}.tfvars
+        
+        # Apply changes
+        terraform apply -var-file=env/${WORKSPACE}.tfvars -auto-approve
+
+    - name: Verify deployment
+      run: |
+        APP="${{ steps.config.outputs.app_name }}"
+        WORKSPACE="${{ steps.config.outputs.workspace }}"
+        
+        kubectl get pods -n ${WORKSPACE} -l app=${APP}
+        kubectl rollout status deployment/${APP} -n ${WORKSPACE} --timeout=300s

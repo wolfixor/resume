@@ -1,0 +1,15 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: production
+
+resources:
+  - ../../base
+  - hpa.yaml
+
+images:
+  - name: wolfix1245/landing
+    newTag: "f3e2c5d162e9541d6610ee26608723e949519cf4"  # This will be updated by CI
+
+commonLabels:
+  environment: production
