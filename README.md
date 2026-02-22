@@ -49,7 +49,7 @@ Docker | Nginx | GitHub Actions | Node.js
 ```
 
 **ریپوزیتوری:**  
-https://github.com/wolfixor/chat-app
+https://github.com/wolfixor/chat-app (repo chat)
 
 ---
 
