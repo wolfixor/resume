@@ -165,6 +165,4 @@ Development → Staging → Production
 
 ---
 
-**ساخته شده با ❤️ توسط یک مهندس DevOps**
-
 </div>
