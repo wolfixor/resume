@@ -73,7 +73,7 @@ GitLab CI/CD | VPS | Docker
 
 ابزاری برای پیدا کردن دارایی‌های سازمان‌ها  
 
-🔗 https://github.com/wolfix1234/asset-discovery  
+🔗 https://github.com/wolfixor/asset-discovery  
 
 **تکنولوژی‌ها:**
 
