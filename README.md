@@ -22,6 +22,7 @@
 - **۱ نود** در محیط Development
 
 #### 📝 بخش دوم: اپلیکیشن پست (Post Application)
+ شامل **~۱۳۰ میکروسرویس**
 - **۲۰ نود** در محیط Production
 - **۱ نود** در محیط Development
 
