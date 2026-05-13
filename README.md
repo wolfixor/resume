@@ -8,11 +8,27 @@
 
 </div>
 
-**current position**
+## 📍 موقعیت فعلی
 
-DevOps Engineer – شرکت سان (son.ir),(map.ir)
+**DevOps Engineer** – شرکت سان (son.ir , map.ir)
+
+### 📍 توضیح نقش در شرکت سان (son.ir , map.ir)
+
+به عنوان **DevOps Engineer**، مدیریت کامل **Docker Swarm** را در دو بخش مجزا بر عهده دارم:
+
+#### 🗺️ بخش اول: اپلیکیشن map.ir
+- شامل **~۱۳۰ میکروسرویس**
+- **۵ نود** در محیط Production
+- **۱ نود** در محیط Development
+
+#### 📝 بخش دوم: اپلیکیشن پست (Post Application)
+- **۲۰ نود** در محیط Production
+- **۱ نود** در محیط Development
+
+#### ⚙️ CI/CD
+- تمامی پایپ‌لاین‌های استقرار و یکپارچه‌سازی بر بستر **GitLab** پیاده‌سازی و مدیریت می‌شوند
+
 ---
-
 ## 🚀 درباره من
 
 مهندس **DevOps** با تجربه در طراحی، پیاده‌سازی و مدیریت زیرساخت‌های مبتنی بر:
@@ -21,16 +37,6 @@ DevOps Engineer – شرکت سان (son.ir),(map.ir)
 - 🐳 **Containerization & Kubernetes**
 - 🔒 **Infrastructure Security**
 - ⚙️ **CI/CD Pipelines**
-
----
-
-## 🌟 پروژه شاخص
-
-### 🏗️ پلتفرم Site-Builder (در حال توسعه)
-
-مدیریت کامل زنجیره DevOps، CI/CD، IaC، امنیت و بخشی از Backend
-
-> 💡 این سیستم قادر است در **کمتر از ۱ دقیقه** یک سایت جدید ایجاد کند و در آینده با هوش مصنوعی و «تک پرامپت» تکمیل خواهد شد.
 
 ---
 
@@ -86,15 +92,20 @@ Python | FastAPI | Security Tools
 
 ---
 
+### 🏗️ پلتفرم Site-Builder (در حال توسعه)
+
+مدیریت کامل زنجیره DevOps، CI/CD، IaC، امنیت و بخشی از Backend
+
+> 💡 این سیستم قادر است در **کمتر از ۱ دقیقه** یک سایت جدید ایجاد کند و در آینده با هوش مصنوعی و «تک پرامپت» تکمیل خواهد شد
+
+
 ## 🏛️ معماری Site-Builder
 
 ```yaml
 Cloud Provider: ArvanCloud
-Architecture: Microservices
 CI/CD: GitHub Actions
 IaC: Terraform
-Backend (Partial): FastAPI
-Frontend: Next.js
+stack: Next.js
 Monitoring: Prometheus + Grafana
 Orchestration: Kubernetes
 ```
