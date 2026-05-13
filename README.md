@@ -12,9 +12,9 @@
 
 **DevOps Engineer** – شرکت سان
 
-https://map.ir
+🔗 https://map.ir
 
-https://son.ir
+🔗 https://son.ir
 
 
 ### 📍 توضیح نقش در شرکت سان
