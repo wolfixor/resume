@@ -10,9 +10,11 @@
 
 ## 📍 موقعیت فعلی
 
-**DevOps Engineer** – شرکت سان (son.ir , map.ir)
+**DevOps Engineer** – شرکت سان
+https://map.ir
+https://son.ir
 
-### 📍 توضیح نقش در شرکت سان (son.ir , map.ir)
+### 📍 توضیح نقش در شرکت سان
 
 به عنوان **DevOps Engineer**، مدیریت کامل **Docker Swarm** را در دو بخش مجزا بر عهده دارم:
 
