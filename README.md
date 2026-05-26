@@ -168,7 +168,7 @@ Development → Staging → Production
 |------|----------|
 | 🚀 DevOps Engineer – شرکت سان (son.ir),(map.ir) | اسفند ۱۴۰۴ - تاکنون |
 | 🚀 DevOps Engineer & Backend Developer – استارتاپ سایت‌ساز | شهریور ۱۴۰۳ - بهمن ۱۴۰۴ |
-| 🐛 فریلنسر باگ‌بانتی | شهریور ۱۴۰۱ - کنون |
+| 🐛 فریلنسر باگ‌بانتی | شهریور ۱۴۰۱ - تاکنون |
 
 ---
 
