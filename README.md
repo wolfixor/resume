@@ -1,6 +1,6 @@
 <div align="center">
 
-# 👨‍💻 مهندس DevOps , bug bounty hunter
+# 👨‍💻 مهندس DevOps و باگ بانتی هانتر
 
 <!-- [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com) -->
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:wolfix007.xiflow@gmail.com)
@@ -168,7 +168,7 @@ Development → Staging → Production
 |------|----------|
 | 🚀 DevOps Engineer – شرکت سان (son.ir),(map.ir) | اسفند ۱۴۰۴ - تاکنون |
 | 🚀 DevOps Engineer & Backend Developer – استارتاپ سایت‌ساز | شهریور ۱۴۰۳ - بهمن ۱۴۰۴ |
-| 🐛 فریلنسر باگ‌بانتی | شهریور ۱۴۰۲ - کنون |
+| 🐛 فریلنسر باگ‌بانتی | شهریور ۱۴۰۱ - کنون |
 
 ---
 
