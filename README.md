@@ -26,7 +26,7 @@
 - **۵ نود** در محیط Production
 - **۱ نود** در محیط Development
 
-#### 📝 بخش دوم: اپلیکیشن پست (Post Application)
+#### 📝 بخش دوم: اپلیکیشن پست (Post Application) => (GNAF)
 - شامل **~۱۳۰ میکروسرویس**
 - **۲۰ نود** در محیط Production
 - **۱ نود** در محیط Development
