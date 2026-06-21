@@ -134,6 +134,19 @@ Development → Staging → Production
 
 ---
 
+## حالا یکم اگه بخوام از روند کار نشون بدم یه نگاه به ریپو های زیر بنداز:
+
+### gitos part by argoCD:
+```
+https://github.com/wolfixor/ArgoCD-sitebuilder
+```
+IAC part by trafform:
+```
+https://github.com/wolfixor/IAC-sitebuild
+```
+
+
+
 ## 🛠️ مهارت‌های تکنیکی
 
 ### ☁️ Cloud & Infrastructure
